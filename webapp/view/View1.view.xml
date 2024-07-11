@@ -1,7 +1,25 @@
 <mvc:View controllerName="project1.controller.View1"
-    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns:l="sap.ui.layout" xmlns:u="sap.ui.unified"
     xmlns="sap.m">
     <Page id="page" title="{i18n>title}">
-        <content />
+        <l:VerticalLayout id="_IDGenVerticalLayout1">
+		<l:content>
+			<u:Calendar
+					id="calendar"
+					select="handleCalendarSelect" />
+			<Button id="_IDGenButton1"
+					press="handleSelectToday"
+					text="Select Today" />
+			<l:HorizontalLayout id="_IDGenHorizontalLayout1">
+				<Label id="_IDGenLabel1"
+						text="Selected Date (yyyy-mm-dd):"
+						class="labelMarginLeft" />
+				<Text
+						id="selectedDate"
+						text="No Date Selected"
+						class="labelMarginLeft"/>
+			</l:HorizontalLayout>
+		</l:content>
+	</l:VerticalLayout>       
     </Page>
 </mvc:View>
